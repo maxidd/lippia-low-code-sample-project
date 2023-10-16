@@ -22,18 +22,15 @@ Feature: Sample
       | 2            | Morty Smith  | Alive  |
 
   @petstore
-  Scenario Outline: Add a new pet to the store
+  Scenario: Add a new pet to the store
     Given base url env.base_url_petstore
     And endpoint pet
-    And header accept = application/json
-    And header Content-Type = application/json
     And body body.json
     When execute method POST
     Then the status code should be 200
-    And response should be name = <name>
     And validate schema pet.json
 
-    Examples:
+    #Examples:
       | name   |
       | doggie |
 

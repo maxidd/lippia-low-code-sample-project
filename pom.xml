@@ -30,15 +30,16 @@
     <profiles>
         <profile>
             <id>Secuencial</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
+
             <properties>
                 <apiExample.runner>testngSecuencial.xml</apiExample.runner>
             </properties>
         </profile>
         <profile>
             <id>Paralelo</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <properties>
                 <apiExample.runner>testngParalell.xml</apiExample.runner>
             </properties>
