@@ -8,7 +8,7 @@ Feature: clockify
 
   @ListWorkspace
   Scenario: Listar Espacios de Trabajo
-    Given base url env.base_url_clockify
+    Given base url https://api.clockify.me/api
     Given endpoint /v1/workspaces
     When execute method GET
     Then the status code should be 200
